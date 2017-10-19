@@ -15,7 +15,7 @@ cmake .. -Wno-dev -DPREFIX=/tc \
         -DTOOLS=0 \
         -DSCRIPTS=1 \
         -DNOJEM=0 \
-        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
         -DCMAKE_CXX_FLAGS="-std=c++11 -m64 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
         -DCMAKE_C_FLAGS="-m64 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
   || exit 255
