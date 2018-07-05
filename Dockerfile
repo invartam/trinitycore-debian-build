@@ -4,7 +4,7 @@ ADD build.sh /usr/bin/build.sh
 
 RUN groupadd -g 1000 psadmin && useradd -g psadmin -u 1000 psadmin
 RUN chmod 755 /usr/bin/build.sh
-RUN mkdir /tc && chown psadmin:psadmin /tc
+RUN mkdir /tc && chmod 755 /tc && chown -R 1000:1000 /tc
 
 RUN apt-get update
 RUN apt-get dist-upgrade -y
