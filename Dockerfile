@@ -2,7 +2,10 @@ FROM debian:jessie
 
 ADD build.sh /usr/bin/build.sh
 
+RUN groupadd -g 1000 psadmin && useradd -g psadmin -u 1000 psadmin
 RUN chmod 755 /usr/bin/build.sh
+RUN mkdir /tc && chown psadmin:psadmin /tc
+
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y cmake make git-core gcc g++ pkg-config \
@@ -15,5 +18,6 @@ RUN ln -s /lib/x86_64-linux-gnu/librt.so.1 /lib64/
 VOLUME [ "/src" ]
 
 WORKDIR /src
+USER psadmin
 
 CMD [ "build.sh" ]
