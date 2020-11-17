@@ -16,8 +16,8 @@ cmake .. -Wno-dev -DPREFIX=/tc \
         -DSCRIPTS=1 \
         -DNOJEM=0 \
         -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-        -DCMAKE_CXX_FLAGS="-m64 -std=c++11 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
-        -DCMAKE_C_FLAGS="-m64 -std=c++11 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
+        -DCMAKE_CXX_FLAGS="-m64 -std=c++17 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
+        -DCMAKE_C_FLAGS="-m64 -std=c++17 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -pipe -fno-strict-aliasing" \
   || exit 255
 make -j4 || exit 255
 make install || exit 255

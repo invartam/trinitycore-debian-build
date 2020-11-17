@@ -9,9 +9,10 @@ RUN mkdir /tc && chmod 755 /tc && chown -R 1000:1000 /tc
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y cmake make git-core gcc g++ pkg-config \
-        libmysqlclient-dev libssl-dev libreadline-gplv2-dev zlib1g-dev \
-        libncurses5-dev libbz2-dev libpthread-workqueue-dev wget libace-dev \
-        libace-6.2.8 git-core libmariadbd-dev
+        libmariadbclient-dev libssl-dev libreadline-gplv2-dev zlib1g-dev \
+        libncurses5-dev libbz2-dev wget libace-dev \
+        libace-dev git-core mariadb-client default-libmysqlclient-dev \
+        libboost-all-dev
 RUN ln -s /lib/x86_64-linux-gnu/ /usr/lib64
 RUN ln -s /lib/x86_64-linux-gnu/librt.so.1 /lib64/
 
