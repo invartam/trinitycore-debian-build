@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 ADD build.sh /usr/bin/build.sh
 
